@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-12">
+        <ng-container *ngIf="(couserobj$ | async) as couser">
+            <h3>{{couser.description}}</h3>
+            <img [src]="couser.iconUrl" [alt]="couser.description" [title]="couser.description">
+        </ng-container>
+    </div>
+    <div class="col">
+        <form [formGroup]="lessonform">
+            <mat-form-field appearance="legacy" class="w-100">
+                <mat-label>lessons</mat-label>
+                <input matInput formControlName="lessons" placeholder="searchlesson">
+              </mat-form-field>
+        </form>
+    </div>
+</div>
